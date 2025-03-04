@@ -5,6 +5,10 @@ const app = express();
 
 app.use(express.json())
 
+app.get('/products', (req, res) => {
+    res.send(products)
+});
+
 // read operation
 app.get('/product/:pid/:uid?', (req, res) => {
     console.log(req.params);
