@@ -5,6 +5,10 @@ const app = express();
 
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.send("You are in the root!")
+})
+
 app.get('/products', (req, res) => {
     res.send(products)
 });
